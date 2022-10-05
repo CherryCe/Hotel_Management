@@ -39,11 +39,13 @@ public class GUI_dal_TaiKhoan extends javax.swing.JDialog {
         txtTaiKhoan = new javax.swing.JTextField();
         txtMatKhau = new javax.swing.JTextField();
         lblExit = new javax.swing.JLabel();
+        cboBaoMat = new javax.swing.JComboBox<>();
+        txtBaoMat = new javax.swing.JTextField();
+        lblIconBaoMat = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(320, 290));
+        setMinimumSize(new java.awt.Dimension(330, 340));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(320, 290));
 
         sdoChucNang.setBackground(new java.awt.Color(255, 255, 255));
         sdoChucNang.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(33, 150, 243)));
@@ -62,7 +64,7 @@ public class GUI_dal_TaiKhoan extends javax.swing.JDialog {
                 lblThoatMouseClicked(evt);
             }
         });
-        sdoChucNang.add(lblThoat, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 80, 40));
+        sdoChucNang.add(lblThoat, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 80, 40));
 
         lblCapNhat.setBackground(new java.awt.Color(255, 255, 255));
         lblCapNhat.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
@@ -104,7 +106,7 @@ public class GUI_dal_TaiKhoan extends javax.swing.JDialog {
                 txtTaiKhoanActionPerformed(evt);
             }
         });
-        sdoTaiKhoan.add(txtTaiKhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 210, 30));
+        sdoTaiKhoan.add(txtTaiKhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 230, 30));
 
         txtMatKhau.setFont(new java.awt.Font("Calibri", 1, 15)); // NOI18N
         txtMatKhau.setForeground(new java.awt.Color(62, 73, 95));
@@ -114,24 +116,46 @@ public class GUI_dal_TaiKhoan extends javax.swing.JDialog {
                 txtMatKhauActionPerformed(evt);
             }
         });
-        sdoTaiKhoan.add(txtMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 210, 30));
+        sdoTaiKhoan.add(txtMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 230, 30));
 
         lblExit.setBackground(new java.awt.Color(255, 255, 255));
         lblExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/close (1).png"))); // NOI18N
-        sdoTaiKhoan.add(lblExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 30, 30));
+        sdoTaiKhoan.add(lblExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 30, 30));
+
+        cboBaoMat.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
+        cboBaoMat.setForeground(new java.awt.Color(62, 73, 95));
+        cboBaoMat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cboBaoMat.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        sdoTaiKhoan.add(cboBaoMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 140, 30));
+
+        txtBaoMat.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
+        txtBaoMat.setForeground(new java.awt.Color(62, 73, 95));
+        txtBaoMat.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        txtBaoMat.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtBaoMat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBaoMatActionPerformed(evt);
+            }
+        });
+        sdoTaiKhoan.add(txtBaoMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 80, 30));
+
+        lblIconBaoMat.setBackground(new java.awt.Color(255, 255, 255));
+        lblIconBaoMat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblIconBaoMat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/iconfinder-securityprotectlockshield04-4021479_113137.png"))); // NOI18N
+        sdoTaiKhoan.add(lblIconBaoMat, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sdoTaiKhoan, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(sdoChucNang, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(sdoTaiKhoan, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(sdoChucNang, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(sdoTaiKhoan, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sdoTaiKhoan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(sdoChucNang, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -151,6 +175,10 @@ public class GUI_dal_TaiKhoan extends javax.swing.JDialog {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_lblThoatMouseClicked
+
+    private void txtBaoMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBaoMatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBaoMatActionPerformed
 
     /**
      * @param args the command line arguments
@@ -706,14 +734,17 @@ public class GUI_dal_TaiKhoan extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cboBaoMat;
     private javax.swing.JLabel lblCapNhat;
     private javax.swing.JLabel lblExit;
+    private javax.swing.JLabel lblIconBaoMat;
     private javax.swing.JLabel lblIconMatKhau;
     private javax.swing.JLabel lblIconTaiKhoan;
     private javax.swing.JLabel lblTaiKhoan;
     private javax.swing.JLabel lblThoat;
     private HELPER.PanelShadow sdoChucNang;
     private HELPER.PanelShadow sdoTaiKhoan;
+    private javax.swing.JTextField txtBaoMat;
     private javax.swing.JTextField txtMatKhau;
     private javax.swing.JTextField txtTaiKhoan;
     // End of variables declaration//GEN-END:variables
